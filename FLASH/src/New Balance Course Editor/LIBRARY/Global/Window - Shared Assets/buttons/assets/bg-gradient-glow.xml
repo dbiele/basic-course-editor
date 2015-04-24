@@ -1,0 +1,44 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/Window - Shared Assets/buttons/assets/bg-gradient-glow" itemID="4dcbf7b5-00000b4f" lastModified="1305215834">
+  <timeline>
+    <DOMTimeline name="bg-gradient-glow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.0322113037109375" b="0.0023345947265625" c="-0.02288818359375" d="0.0230560302734375" tx="35.75" ty="13.35"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.215686274509804"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.498039215686275" ratio="0.454901960784314"/>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.647058823529412"/>
+                      </LinearGradient>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.0322113037109375" b="0.0023345947265625" c="-0.02288818359375" d="0.0230560302734375" tx="121.75" ty="13.4"/>
+                        </matrix>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.215686274509804"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.498039215686275" ratio="0.454901960784314"/>
+                        <GradientEntry color="#FFFFFF" alpha="0" ratio="0.647058823529412"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!415 -1S1|0 418!0 418|1133 418!1133 418|1547 -1!1547 -1|415 -1"/>
+                    <Edge fillStyle0="2" edges="!1720 419S1|2853 419!2853 419|3267 0!3267 0|2135 0!2135 0|1720 419"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

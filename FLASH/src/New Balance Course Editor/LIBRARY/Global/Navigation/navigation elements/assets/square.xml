@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/Navigation/navigation elements/assets/square" itemID="4dbee830-000001c3" symbolType="graphic" lastModified="1320875354">
+  <timeline>
+    <DOMTimeline name="square">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 100S2|0 0!0 0|100 0!100 0|100 100!100 100|0 100"/>
+                    <Edge cubics="!0 100(0,100;0,100 0,0 0,0q0 100 0 0)0,0;"/>
+                    <Edge cubics="!100 100(100,100;100,100 0,100 0,100q100 100 0 100);"/>
+                    <Edge cubics="!100 0(100,0;100,0 100,100 100,100q100 0 100 100);"/>
+                    <Edge cubics="!0 0(;0,0 100,0 100,0q0 0 100 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

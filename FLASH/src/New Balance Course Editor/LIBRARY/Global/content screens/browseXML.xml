@@ -1,0 +1,87 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/browseXML" itemID="4f0b7fff-00000792" linkageExportForAS="true" linkageBaseClass="com.invision.view.BrowseView" linkageClassName="BrowseView" lastModified="1326247533" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="browseXML">
+      <layers>
+        <DOMLayer name="textfield" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="filename_txt" width="453.1" height="23.9" isSelectable="false" border="true">
+                  <matrix>
+                    <Matrix tx="24" ty="64"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="14" bitmapSize="280" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="buttons" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/Window - Shared Assets/buttons/btn-browse" name="browse_btn" centerPoint3DX="528.5" centerPoint3DY="75.55">
+                  <matrix>
+                    <Matrix tx="497" ty="65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.5" y="10.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMStaticText width="547.1" height="23.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="24" ty="7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Load XML</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="18" bitmapSize="360" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText selected="true" width="547.1" height="18.6" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="24" ty="32"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Click the BROWSE button to select the courses content.xml file.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="14" bitmapSize="280" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/browse_background" centerPoint3DX="291.55" centerPoint3DY="58.45">
+                  <transformationPoint>
+                    <Point x="291.55" y="58.45"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter angle="90" blurX="10" blurY="10" distance="2" quality="3" strength="0.25"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,66 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/Navigation/navigationWindow" itemID="4f0b5504-0000077f" linkageExportForAS="true" linkageBaseClass="com.invision.view.NavigationView" linkageClassName="navigationWindow" lastModified="1326143155" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="navigationWindow">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="icons/generaldata_icon" name="gendata_icon" selected="true" centerPoint3DX="64" centerPoint3DY="64">
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="icons/save_icon" name="save_icon" centerPoint3DX="202.3" centerPoint3DY="484.7">
+                  <matrix>
+                    <Matrix tx="138" ty="414"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64.3" y="70.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMBitmapInstance libraryItemName="icons/nb_branding.png">
+                  <matrix>
+                    <Matrix ty="276"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMSymbolInstance libraryItemName="icons/feedback_icon" name="feedback_icon" centerPoint3DX="202" centerPoint3DY="64">
+                  <matrix>
+                    <Matrix tx="138"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="icons/glossarydata_icon" name="glossary_icon" centerPoint3DX="64" centerPoint3DY="202">
+                  <matrix>
+                    <Matrix ty="138"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="icons/referencedata_icon" name="reference_icon" centerPoint3DX="202" centerPoint3DY="202">
+                  <matrix>
+                    <Matrix tx="138" ty="138"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="icons/scenedata_icon" name="scenedata_icon" centerPoint3DX="64" centerPoint3DY="478">
+                  <matrix>
+                    <Matrix ty="414"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="64" y="64"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

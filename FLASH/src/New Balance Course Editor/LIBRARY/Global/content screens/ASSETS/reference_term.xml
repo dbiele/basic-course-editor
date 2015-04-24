@@ -1,0 +1,128 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/ASSETS/reference_term" itemID="4f0c97ac-000005d7" linkageExportForAS="true" linkageBaseClass="com.invision.view.ReferenceTermWindow" linkageClassName="reference_term" lastModified="1326230181" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="reference_term">
+      <layers>
+        <DOMLayer name="text" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="47.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Icon Link: </characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="8.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Reference Name:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="88.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>File Link:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMInputText name="icon_txt" width="472.95" height="15.9" border="true">
+                  <matrix>
+                    <Matrix tx="10" ty="68.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMInputText name="name_txt" width="473.95" height="15.9" border="true">
+                  <matrix>
+                    <Matrix tx="10" ty="29.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMInputText name="file_txt" selected="true" width="471.95" height="15.9" border="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="10" ty="109.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/Window - Shared Assets/buttons/btn-delete" name="delete_btn" centerPoint3DX="456.45" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix tx="424.95" ty="1.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.5" y="10.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!9839 2820|0 2820!0 2820|0 0!0 0|9839 0!9839 0|9839 2820"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

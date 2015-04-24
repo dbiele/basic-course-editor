@@ -1,0 +1,53 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="icons/generaldata_icon" itemID="4f0b51df-00000755" lastModified="1326144596">
+  <timeline>
+    <DOMTimeline name="generaldata_icon">
+      <layers>
+        <DOMLayer name="text" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText width="119.05" height="23.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="6" ty="97"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>General Data</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-2.85" size="18" bitmapSize="360" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.06890869140625" b="0.0900726318359375" c="-0.06890869140625" d="0.0900726318359375" tx="64" ty="64.05"/>
+                        </matrix>
+                        <GradientEntry color="#00A6C9" ratio="0"/>
+                        <GradientEntry color="#00BEE3" ratio="0.701960784313725"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!0 2560|0 0!0 0|2560 0!2560 0|2560 2560!2560 2560|0 2560"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

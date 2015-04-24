@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/Navigation/navigation elements/background_navigation" itemID="4dc05721-000025c5" lastModified="1308944208" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="background_navigation">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/Navigation/navigation elements/backgrounds/gfx-bgGreyDarkEdges" centerPoint3DX="507.9" centerPoint3DY="344.95">
+                  <transformationPoint>
+                    <Point x="507.9" y="344.95"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

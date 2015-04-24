@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<administration>
+		<admin coursetype="lms" courseexpiration="365" coursedate="07,12,30" coursetitle="New Balance: Order Process" id="" navigation="open" autoscenecomplete="autocomplete" author="InVisionLearning" created="5/1/2011" />
+	</administration>
+	<cssstyles>
+		<![CDATA[
+			.bluetext {
+      			color: #0000CC;
+   			}
+			.redtext {
+      			color: #FF0000;
+   			}
+		]]>		
+	</cssstyles>
+	<feedbackwindow>
+		<link urlid="mailto:nbsalestraining@newbalance.com" />
+	</feedbackwindow>
+	<glossary>
+		<term image="default" name="Allocate" id="term1">
+			<![CDATA[The process of assigning on hand inventory to sales orders.  In JBA, sales orders are given allocation priority based on FIFO. Once an order receives allocation, it should only lose allocation if it is de allocated upon system request.]]>
+		</term>
+		<term image="default" name="Allocation Window" id="term2">
+			<![CDATA[Number of days ahead of request date that a sales order can allocate to a specific incoming purchase order or work order.  The allocation window is set at 21 days.]]>
+		</term>
+		<term image="default" name="Barcode" id="term3">
+			<![CDATA[The precise arrangement of parallel lines (bars) and spaces both of varying widths.  The barcode represents data elements and can be read by a scanner.]]>
+		</term>
+		<term image="default" name="Bill of Lading (BOL)" id="term4">
+			<![CDATA[Shipping document used to transfer goods from the shipper to the carrier.]]>
+		</term>
+		<term image="default" name="Cancel Date" id="term5">
+			<![CDATA[The date the order will not ship after.  JBA currently defaults to 30 days from requested ship date, but can be manually changed if necessary.  The customer can also drive these dates by sending a cancel date in with the order.]]>
+		</term>
+		<term image="default" name="Customer PO#" id="term6">
+			<![CDATA[The purchase order # submitted by the customer. This is the NB and Customer Order link.]]>
+		</term>
+		<term image="default" name="DC" id="term7">
+			<![CDATA[Distribution Center- where finished product is stored and shipped from.  Also known as the warehouse. ]]>
+		</term>
+		<term image="default" name="DNSB Date" id="term8">
+			<![CDATA[‘Do Not Ship Before’ Date.  The order MAY drop to pick ticket, however, the warehouse will NOT release the order to be worked on prior to this date.]]>
+		</term>
+		<term image="default" name="De-allocate" id="term9">
+			<![CDATA[To realign orders, or correct orders back to FIFO.]]>
+		</term>
+		<term image="default" name="Default Warehouse" id="term10">
+			<![CDATA[The warehouse/DC where the product is stored.  There are times where inventory may be in another warehouse, but sales orders should not be entered in a warehouse other than the default without prior approval from the Operations Team.]]>
+		</term>
+		<term image="default" name="Direct to Outbound" id="term11">
+			<![CDATA[Orders coded as DO are processed from a specified staging area rather than from general inventory. (Used for ‘breakout’ orders).]]>
+		</term>
+		<term image="default" name="Drop to Pick Ticket" id="term12">
+			<![CDATA[When the sales order has met allocation % necessary, the order will flow (drop) to the warehouse for picking, packing and shipment.]]>
+		</term>
+		<term image="default" name="Due Date" id="term13">
+			<![CDATA[Date by which PO/WO is expected to arrive at the appropriate location (Direct Container orders) or Distribution Center (warehoused orders).]]>
+		</term>
+		<term image="default" name="EDI" id="term14">
+			<![CDATA[‘Electronic Data Interchange’ is the sending and receiving of business transactions such as purchase orders and invoices electronically.]]>
+		</term>
+		<term image="default" name="EDI Terms - ASN" id="term15">
+			<![CDATA[‘Advance Shipment Notification’ electronically transmits merchandise packing list information that allows for pre-receiving.]]>
+		</term>
+		<term image="default" name="EDI Terms - FA" id="term16">
+			<![CDATA[‘Functional Acknowledgement’ is the electronic document used to advise customer of purchase order receipt and advises NB the customer has received their ASN’s and invoices.]]>
+		</term>
+		<term image="default" name="EDI Terms - Price Variance/Price Comparison" id="term17">
+			<![CDATA[For electronic purchases the price the customer sent in comparison to what we have in JBA. If there is a difference, the order will go on exception for review.]]>
+		</term>
+		<term image="default" name="EDI Terms - 850" id="term18">
+			<![CDATA[Electronic transmittal of purchase order document]]>
+		</term>
+		<term image="default" name="EDI Terms - 810" id="term19">
+			<![CDATA[Electronic transmittal of invoice document]]>
+		</term>
+		<term image="default" name="EDI Terms - 856" id="term20">
+			<![CDATA[Electronically transmitted Advance Shipment Notification]]>
+		</term>
+		<term image="default" name="Exclusion Table" id="term21">
+			<![CDATA[New styles not yet shipping to customers- or (rarely) styles having quality issues.]]>
+		</term>
+		<term image="default" name="FIFO" id="term22">
+			<![CDATA[‘First in, First out’- sales orders entered first will allocate/ship first.]]>
+		</term>
+		<term image="default" name="Forecast" id="term23">
+			<![CDATA[An educated predication of the future.  In this case, the forecast predicts demand by style, size and color.  The forecast is needed for planning supply.  The forecast does not constitute and order.  The only way to guarantee that you receive your footwear or apparel is to place a firm order within booking guidelines.]]>
+		</term>
+		<term image="default" name="Future Booking Program" id="term24">
+			<![CDATA[The future booking program is for all MTO styles and all New Introductions.  This is to ensure NB meets corporate minimums to buy raw materials for production within in the necessary lead-time.  ]]>
+		</term>
+		<term image="default" name="Future Only" id="term25">
+			<![CDATA[Styles which must be entered as a FUTURE order, with correct lead time.  No fill-in orders or ASAP orders should be entered without prior approval from the Inventory Availability mailbox.]]>
+		</term>
+		<term image="default" name="Inner Carton or Inner Pack" id="term26">
+			<![CDATA[A group of small boxes or polybags containing a standard number of identical or similar items and placed inside an outer master carton.]]>
+		</term>
+		<term image="default" name="INTRO date" id="term27">
+			<![CDATA[This is according to the Intro/Phase-out list distributed by Forecasting.  Orders for new intro styles MUST be on separate orders than in-line shoes.]]>
+		</term>
+		<term image="default" name="Inventory Terms - On-Hand" id="term28">
+			<![CDATA[Total number of a SKU at the DC including all allocated/picked/frozen orders.]]>
+		</term>
+		<term image="default" name="Inventory Terms - Frozen" id="term29">
+			<![CDATA[Product which has been segregated for inspection, or in the process of being removed from inventory.  Frozen inventory cannot be allocated or picked against a sales order. ]]>
+		</term>
+		<term image="default" name="Inventory Terms - Available" id="term30">
+			<![CDATA[Total number of a SKU which is available to allocate to sales orders.]]>
+		</term>
+		<term image="default" name="Inventory Terms - Net Available" id="term31">
+			<![CDATA[total number of a SKU which will be available by a specified date after incoming product and reservation has been applied to other sales orders.]]>
+		</term>
+		<term image="default" name="Inventory Availability Mailbox" id="term32">
+			<![CDATA[An email address which is used to request and receive authorization to place sales orders for unplanned business.]]>
+		</term>
+		<term image="default" name="JBA" id="term33">
+			<![CDATA[The commonly used name for the company’s enterprise resource planning (ERP) software.  You will occasionally hear the name GEAC, which is the name of the parent company that develops the software.  The actual name of the ERP software package is “System 21”.]]>
+		</term>
+		<term image="default" name="LTL Carrier" id="term34">
+			<![CDATA[‘Less than Trailer Load’- when freight is greater than several cartons, but less than a full trailer load.]]>
+		</term>
+		<term image="default" name="Line level" id="term35">
+			<![CDATA[Each individual line/style of the sales order.]]>
+		</term>
+		<term image="default" name="Made to Order Style" id="term36">
+			<![CDATA[The product is manufactured based on the number of orders in the system.  ]]>
+		</term>
+		<term image="default" name="Made to Stock Style" id="term37">
+			<![CDATA[The product is manufactured based on forecast for general inventory.  ]]>
+		</term>
+		<term image="default" name="Master Bill of Lading" id="term38">
+			<![CDATA[Shipping document used to move merchandise to a consolidator.  The shipment is segregated into individual shipments with different “final” destinations.  Individual Bills of Lading for each “final” destination accompanies the Master Bill of Lading.]]>
+		</term>
+		<term image="default" name="On Pick" id="term39">
+			<![CDATA[Order at the warehouse, being processed for shipping.]]>
+		</term>
+		<term image="default" name="Order Level" id="term40">
+			<![CDATA[The header of the sales order.]]>
+		</term>
+		<term image="default" name="Order Source" id="term41">
+			<![CDATA[Where the sales order originated such as phoned in or faxed.]]>
+		</term>
+		<term image="default" name="Order Type" id="term42">
+			<![CDATA[Predetermined set rules on how orders are processed and delivered.]]>
+		</term>
+		<term image="default" name="Outstanding (O/S)" id="term43">
+			<![CDATA[Orders in the system will show O/S (outstanding) until they are reserved . An order will also show O/S if the product is not due in until after the order’s Cancel Date, and therefore will never reserve to the order. Note: If your order is a future order, units will show O/S until the order is within the 120 day reservation window because Supply Chain Planning may have not confirmed production for this order yet.  If your order is a direct container order, Warehouse 97, it should never be O/S.]]>
+		</term>
+		<term image="default" name="Pack by SKU" id="term44">
+			<![CDATA[Product packed in solid cases of one style, size, color and width.]]>
+		</term>
+		<term image="default" name="Pack by Style" id="term45">
+			<![CDATA[Product packed in cases of one style, mixing size, color and width.]]>
+		</term>
+		<term image="default" name="Pack by Style/Width" id="term46">
+			<![CDATA[Product packed in cases of one style/one width, mixing size and color.]]>
+		</term>
+		<term image="default" name="Pack by Store or “Mark For”" id="term47">
+			<![CDATA[Purchase Order term requiring shipment to be packed and labeled by single store.  Cartons may contain multiple SKU’s/styles, but only what is ordered for a single store location.  Entire shipment is then shipped to the retailers designated distribution center.]]>
+		</term>
+		<term image="default" name="Packing List" id="term48">
+			<![CDATA[A detailed itemized of the merchandise contained within a shipment.  New Balance Packing List is on the last carton loaded into the trailer.  The last carton is the lead carton when opening the trailers.]]>
+		</term>
+		<term image="default" name="Palletized Shipments" id="term49">
+			<![CDATA[Merchandise loaded on a standard 48”x 40”x 4” portable platform used for storing or moving the freight with a fork-lift or lift jack.]]>
+		</term>
+		<term image="default" name="Past cancel" id="term50">
+			<![CDATA[Orders with a cancel date prior to today’s date.  Sales orders will not drop to pick ticket and product will not reserve to sales orders past cancel.]]>
+		</term>
+		<term image="default" name="Pick Date" id="term51">
+			<![CDATA[The date the order drops to the warehouse on pick ticket.]]>
+		</term>
+		<term image="default" name="Pick days/Pick window" id="term52">
+			<![CDATA[Number of days in the future sales orders meeting all order fulfillment criteria will be sent to the Distribution Center for picking, packing and shipment.  The number of days is changed throughout the month to enable the DC to process orders in advance.  The window will not extend beyond the 10th of the following month. ]]>
+		</term>
+		<term image="default" name="Pick Percents" id="term53">
+			<![CDATA[The percent of the order in which the Initial and back-order needs to allocate in order to drop to pick ticket at the warehouse.  Percents may be at the line and/or order level of the sales order.]]>
+		</term>
+		<term image="default" name="Promise Date" id="term54">
+			<![CDATA[The calculated date that the supply should be received in to the WHS and allocate the order.]]>
+		</term>
+		<term image="default" name="Purchase order" id="term55">
+			<![CDATA[Finished goods purchased from an outside factory.  Reservations to sales orders being with ‘6’.  It’s supply that is made overseas.]]>
+		</term>
+		<term image="default" name="Req" id="term56">
+			<![CDATA[All direct containers go on requisition status for 2 weeks before planning confirms and releases the orders to the factories.  Note: If an order is in Req status for longer than 2 weeks, this should raise a red flag, as the order has not been released to the factory to be produced.  Sales can partner with their National Account Specialist to troubleshoot this order.  ]]>
+		</term>
+		<term image="default" name="Request Date" id="term57">
+			<![CDATA[The date the customer has requested the product to ship.]]>
+		</term>
+		<term image="default" name="Reservation" id="term58">
+			<![CDATA[The process of assigning inbound inventory to sales orders.  Inbound inventory comes either through a purchase order (non-NB factory) or work order (NB factory).]]>
+		</term>
+		<term image="default" name="Reservation Window" id="term59">
+			<![CDATA[Number of days/months ahead of request date that a sales order can reserve to a specific incoming purchase order or work order.  The allocation window is set at 120 days, approx. 4 months.  For request dates more than 120 days out, orders will show “outstanding”.]]>
+		</term>
+		<term image="default" name="SOP" id="term60">
+			<![CDATA[Standard Operating Procedures.]]>
+		</term>
+		<term image="default" name="UPC" id="term61">
+			<![CDATA[Universal Product Code. The 12 digit code and number representing consumer products in retail and non-retail applications.]]>
+		</term>
+		<term image="default" name="W.M.S." id="term62">
+			<![CDATA[‘Warehouse Management System’.  System used at the DC’s as we use JBA. Work Order- Similar to a purchase order.  Work order’s are for domestic product.  Reservations to sales orders being with W/S/N/B/L.]]>
+		</term>
+	</glossary>
+	<jobaids>
+		<item link="media/Job Aid Corporate defaults.pdf" icon="media/word_icon.png">
+			<![CDATA[Job Aid for Corporate Defaults]]>
+		</item>
+		<item link="media/Job Aid NB Stocking Policy MTO vs MTS.pdf" icon="media/word_icon.png">
+			<![CDATA[Job Aid for NB Stocking Policy MTO vs MTS]]>
+		</item>
+		<item link="media/Order Process FAQs.pdf" icon="media/word_icon.png">
+			<![CDATA[Frequently Asked Questions – Order Process]]>
+		</item>
+		
+	</jobaids>
+	<audio path="media/"/>
+	<states>
+		<state name="default" enabledControls="exit, help, menuwindow, back, pause, next, feedback, glossary, jobaids, caption"/>
+		<state name="menu" enabledControls="caption"/>
+		<state name="content_admintext" enabledControls="exit, help, back, next"/>
+		<state name="content_main" enabledControls="exit, help, menu, caption, replay, back, pause"/>
+		<state name="content_courseconclusion" enabledControls="exit, caption, help"/>
+		<state name="question_main" enabledControls="exit, caption, help"/>
+		<state name="question_assessment" enabledControls="back, pause, next"/>
+		<state name="assessment_intro" enabledControls="exit, help, caption, replay, pause, menuwindow"/>
+		<state name="assessment_submit" enabledControls=""/>
+		<state name="assessment_results" enabledControls="help, next"/>
+	</states>
+	<templates>
+		<template id="default" desc="Basic Page" showpagenumber="true" listid="pages">
+			<type>content</type>
+			<state>default</state>
+			<renderer>com.invision.client.BasicRenderer</renderer>
+		</template>
+		<template id="00_coursemainmenu" desc="Course Main Menu">
+			<type>menu</type>
+			<state>menu</state>
+			<renderer>com.invision.client.renderers.CourseMainMenu</renderer>
+		</template>
+		<template id="26_custom" desc="CUSTOM">
+			<type>menu</type>
+			<state>question_main</state>
+			<renderer>com.invision.client.renderers.CustomContent</renderer>
+		</template>
+		<template id="30_custom" desc="Basic Page" showpagenumber="true" listid="pages">
+			<type>content</type>
+			<state>default</state>
+			<renderer>com.invision.client.BasicRenderer</renderer>
+		</template>
+		<template id="14_multiplechoice" desc="QUIZ">
+			<type>question</type>
+			<state>question_main</state>
+			<renderer>com.invision.client.renderers.MultipleChoice</renderer>
+		</template>
+		<template id="22_finalassesintro" desc="FINAL TEST">
+			<type>assessment_pre</type>
+			<state>assessment_intro</state>
+			<renderer>com.invision.client.renderers.FinalTestIntro</renderer>
+		</template>
+		<template id="23_finalasssubmit" desc="FINAL TEST">
+			<type>assessment_post</type>
+			<state>assessment_submit</state>
+			<renderer>com.invision.client.renderers.FinalTestSubmit</renderer>
+		</template>
+		<template id="24_finalassesresults" desc="FINAL TEST">
+			<type>assessment_post</type>
+			<state>assessment_results</state>
+			<renderer>com.invision.client.renderers.FinalTestResults</renderer>
+		</template>
+		<template id="25_courseconclusion" desc="FINAL">
+			<type>assessment_post</type>
+			<state>content_courseconclusion</state>
+			<renderer>com.invision.client.renderers.CourseConclusion</renderer>
+		</template>
+	</templates>
+	<scenes>
+		<scene id="scene1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/start_1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Welcome to New Balance Order Process: Life of an order.\rThe Help Menu will explain course navigation and features. It is recommended that you take the time to view it, especially if you are new to New Balance eLearning courses.\r" captiontime="0, 5.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame01_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/intro_f2.mp3" />
+			</audio>
+			<captioning><captions captiontext="Order processing is a key component of order fulfillment. Order processing&quot; is the term used to describe the process or work flow from the point of order entry to the selection, packing and delivery of New Balance products to our customers.\rIn this course, you will learn about the lifecycle of an order through the New Balance order process and how the operational procedures of the distribution centers are determined by many factors.  The approach to order processing will vary, depending on the order type.\rTake some time to explore each lesson.  And pay attention, you’ll be asked some questions about the New Balance order process and how it applies to your role within New Balance!\r" captiontime="0, 14.75, 18, 29.75, 36" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f3_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="In this course, we’ll be covering the New Balance order process, which is the collective steps and tasks associated with fulfilling your customers’ orders.\rWhile this course focuses on sales and service within New Balance, learning about the life of an order is valuable information to all New Balance associates and partners . \rIn a short time, you’ll learn about the order process, and explore the impact you have on this process based on your role within New Balance.  \rUnderstanding this process will help to ensure an efficient and long term working relationship with our customers.\rTake a few moments to review the course objectives before you begin.\r" captiontime="0, 10.5, 22.5, 32.75, 40.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene3a_1" template="30_custom" mediatype="none" title="">
+			<audio>
+				<audiofile audio="media/f3a_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="New Balance has a history of 100 years of enduring performance and is still running strong today. Part of what makes New Balance so unique is our commitment to making products that not only provide performance, but also superior fit and comfort. The same attention that is placed on our athletic shoes and apparel is also given to our associates and partners.  Our designated sales and service representatives work together to meet the diverse product needs of each New Balance customer.   \rAs we move through the course, we’ll be focusing on three associate roles:  Account Service Representative, National Account Specialist and Sales Representative.\rPay close attention to your role and the collective tasks and steps needed to fulfill your customers’ order. \r" captiontime="0, 13.75, 27, 34.5, 46.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame03a_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene3a_2" template="30_custom" mediatype="none" title="" completiontype="manual">
+			<audio>
+				<audiofile audio="media/f3b_s1.mp3" async="true" />
+			</audio>
+			<captioning>
+				<captions captiontext="" captiontime="0" />
+				<captionsID1 captiontext="The role of an Account Service Representative is to primarily answer inbound calls from New Balance specialty accounts. \rThese representatives are typically placing orders, checking available inventory, processing returns and providing detailed product information.  \rEach day our representatives speak to various New Balance customers requiring an in-depth knowledge of all of our brands.  \r" captiontime="0, 9.25, 20.5" />
+				<captionsID2 captiontext="National Account Specialists are divided into 2 groups:  \rKey Accounts and Specialty Accounts. \rKey Accounts are our volume accounts including: Moderate department stores, Sporting goods, Shoe chains, Athletic Specialty and Specialty Department Stores. \rOur Specialty Accounts: include Running Specialty, Core/Family shoe, New Balance Stores, and Territory Accounts (which includes all other specialty).\rThe National Account Specialists are responsible for open order management within their channel and making sure orders are complete and ship on-time.  They collaborate with the  Strategic Account Managers, Sales reps and the accounts directly.\r" captiontime="0, 5.25, 8, 20.25, 33, 44.75" />			
+				<captionsID3 captiontext="Sales Representative exemplify the New Balance brand &amp; communicate the brand position, statement and story to our customers and their retail associates. They work directly with the customer to sell New Balance product in their stores.  The sales representative may have customers that vary from small independent stores to large/complex customer. \r" captiontime="0, 14.75" />			
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame03a_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene4_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f4_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="The New Balance order process begins with the acceptance of an order from the customer.  It is not considered complete until the customer receives the products, it is determined that the order has been delivered accurately and completely and finally, the customer is invoiced and New Balance receives payment.\r" captiontime="0, 12.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame04_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene4_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f4_s2.mp3" />
+			</audio>
+			<captioning><captions captiontext="At New Balance, our order management system is designed for large scale order processing. Our customers require an assurance of the product availability coupled with accurate delivery dates.\rNew Balance’s order process is able to handle each order according to its assigned priority and  our multi-channel environment.\rLet’s explore some of these channels in more detail.  \r" captiontime="0, 13.25, 15.25, 23.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame04_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene4_3" template="30_custom" mediatype="none" title="" completiontype="manual">
+			<audio>
+				<audiofile audio="media/f4_s3.mp3" async="true" />
+			</audio>
+			<captioning>
+				<captions captiontext="Click on each Channel to learn more.\r" captiontime="0" />
+				<captionsID1 captiontext="The New Balance Store channel is made up of more than150 independently owned and operated stores in North America and represents the New Balance family of brands.  Offering a world class in-store experience focusing on fit and service with emphasis on community outreach programs.\rThese accounts provide product expertise and offer the most complete portfolio of our higher end pinnacle product in extended widths, sizes and head to toe apparel and accessories. \rThis channel targets the activist consumer with a focus on technical running and activating movement for the entire family.  New Balance stores also have a strong medical marketing clientele.\r" captiontime="0, 14, 22, 36, 48.75" />
+				<captionsID2 captiontext="The run specialty channel is focused on consumers who are running and walking as a healthy lifestyle.  This includes the beginner or casual runner, to world class athletes.\r" captiontime="0" />
+				<captionsID3 captiontext="The family channel is an eclectic blend of over 1,800 accounts, in all markets.\rThey represent some of New Balance’s longest standing partners.  These stores are typically multi-generational, independently owned and operated best in full service environments.\rThe Family Shoe consumer is a diverse group ranging from a progressive to a conservative consumer.\rFamily Shoe stores typically have strong customer loyalty.  Some stores are embracing the fashion trends and the latest technology.  \rHistorically, the average age of this consumer was over 45.  Today, the average consumer age is younger, reflecting the current mindset of an active, healthy lifestyle.\r" captiontime="0, 7.5, 20.5, 28.5, 38.75" />			
+				<captionsID4 captiontext="This other specialty channel is comprised of catalog, internet, military, regional and other independent accounts.\rRanging from infants to kids to teens and college students, this channel develops assortments that match the consumers with each retailer.\r" captiontime="0, 11.25" />
+				<captionsID5 captiontext="Moderate department stores focus on a price and value. \rThe consumer is typically a soccer mom looking for a good value.  The latest fashion without the price.\rSince moderate department stores tend to use tab and circular marketing, there includes a high frequency of promotional discounting.\r" captiontime="0, 5.5, 13.75" />
+				<captionsID6 captiontext="The target consumer is 30-50 year old suburban moms who tend to shop for the entire family.  Therefore, New Balance needs to have a strong product offering in men’s, women’s and kid’s across all categories to capitalize on their broad footwear needs.\r" captiontime="0, 15.5" />
+				<captionsID7 captiontext="New Balance’s Sporting good stores focus on high school athletes and their family. \rNew Balance sells to some of the largest sporting goods stores and additionally offers deals for dads and kids.\r" captiontime="0, 7" />
+				<captionsID8 captiontext="The Specialty Department Stores cater to the customer’s individual needs.\rThe consumer is a majority female consumer who values superior customer service and high quality over price point.\rTop of the line customer service and upscale shopping environment are some distinguishing factors.\r\r" captiontime="0, 6" />
+				<captionsID9 captiontext="Athletic Specialty Stores are located in shopping malls.\rMall shoppers are looking for the latest trends\rThe latest styles in sit-and-fit environment with a good price points.\rThe latest trends in a discounted model for this channel.\r" captiontime="0, 5.5, 9, 15" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame04_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene5_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f5_intro.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’ve taken some time to understand New Balance’s wide retail distribution, let’s explore some of the types of orders that our customers place.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame05_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene5_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f5_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="An order type is used to initiate the booking and order process.  All orders must be placed within our published guidelines.\rTo ensure that all sales orders are entered with the correct order type we’ll begin by reviewing common order types.\rRemember, each order type may have a different order source, where the sales order originated.  We will discuss that further in the next lesson.\r\r" captiontime="0, 9.75, 18" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame05_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndStop" label="anim01" />
+				</animation>
+				<animation time="18">
+					<keyframe action="gotoAndStop" label="anim02" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene5_3" template="30_custom" mediatype="none" title="" completiontype="manual" >
+			<audio>
+				<audiofile audio="media/f5_s2.mp3" async="true" />
+			</audio>
+			<captioning>
+				<captions captiontext="Click on each order type to learn more .\r" captiontime="0" />
+				<captionsID1 captiontext="To learn more about all New Balance order types, click on the reference button located in the main navigation to learn more\r" captiontime="0" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame05_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene6_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f6_s1.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Now that you are familiar with New Balance order types, let’s discuss where the sales order originated, the order source.\r•Was it phoned in?\r•Did the sales rep enter the order?\r•Did the account use B2B?\rDepending on your role and department, you will use the order source most appropriate.\r" captiontime="0, 10.5, 12.5, 15.25, 18" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame06_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene6_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f6_s2.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Let’s explore each of the order sources.  Click on each order source to learn more.\r" captiontime="0" />
+				<captionsID1 captiontext="EDI (Electronic Data Interchange) is the exchange of electronic data by agreed upon message standards.  One of the most important benefits is that EDI reduces the time and resources needed to process data.  Essentially, EDI is a single point of entry that decreases errors in data entry.\r" captiontime="0, 15.75" />
+				<captionsID2 captiontext="B2B is a website that allows customers to place orders, check available inventory, and track shipments at their convenience. \rUsing this self-service tool, customers can place the following order types:\r•ASAP- 24 hour ship and backorder (E)\r•Closeouts (2)\r•Futures (A)\r\r" captiontime="0, 10, 15.25, 20.5, 21.75" />
+				<captionsID3 captiontext="Ecom is the web portal for entering orders, reviewing submitted orders and checking available inventory.   The order types shown in eCom will be based on individual customers.\r" captiontime="0" />
+				<captionsID4 captiontext="JBA is New Balance’s Enterprise Resource Planning, ERP or internal order process entry system used by the customer services department. Orders that are placed via EDI, eCom, or B2B all eventually flow into JBA.  This allows our service department to help with order inquiry and/or order management.\r" captiontime="0, 17.75" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame06_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene6_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f6_s7.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Locate your role at New Balance below.  Click to learn about which order source is appropriate for your department.\r" captiontime="0" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame06_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene6_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f6_faq.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Placeholder Closed Caption text\r\r" captiontime="0, 9.25" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame06_05_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene6_6" template="30_custom" mediatype="none" title="">
+			<captioning>
+				<captions captiontext="" captiontime="0" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame06_knowledge_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’re familiar with the order type and the order source, let’s discuss the process each order will flow though from point of entry to shipment to the customer.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s2.mp3" />
+			</audio>
+			<captioning><captions captiontext="The New Balance footwear booking process is based on our accounting calendar.  Please refer to the Knowledgebase for the booking guidelines for all of our brands.\rLet’s take a look at our NB footwear booking program to understand the importance it has in the Order Process.\r" captiontime="0, 11.25" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s3.mp3" />
+			</audio>
+			<captioning><captions captiontext="An Order Due Date is required to provide New Balance enough lead-time to ensure product availability by the requested ship date \r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_4" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s4.mp3" />
+			</audio>
+			<captioning><captions captiontext="All future only styles must be booked in advance according to the booking program.  These MTO styles are not available for replenishment.  Excess inventory is not available for ASAP delivery.  Inventory is planned off futures orders. Corporate minimums must be met before we purchase.\rHere are some examples of MTO styles: Makeup, Futures Only, Exclusive, Direct Container\r" captiontime="0, 17, 24.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_04_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s5.mp3" />
+			</audio>
+			<captioning><captions captiontext="All new introductions that are MTS still have to follow the booking program to ensure first delivery. Initially, these styles are treated like an MTO because customers can’t replenish until after the intro date.  \rCustomers that book future orders on time for a new style’s intro quarter will have the ability to place replenishment orders after the style’s intro date.\r•Customers that do not book a style will be restricted from inventory on that style for a period of time after the intro date.\r•Inventory is planned based on forecast.\r•Here are some examples of MTS styles Core, In-line, Limited, Select, Seasonal." captiontime="0, 15.25, 18.25, 29.25, 38.75, 42.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_05_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_6" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s6.mp3" />
+			</audio>
+			<captioning><captions captiontext="Let’s take a further look at New Balance’s stocking policy and the difference between MTO and MTS.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_06_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene7_7" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f7_s7.mp3" async="true" />
+			</audio>
+			<captioning><captions captiontext="Let’s test your knowledge!\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame07_knowledge_check_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene8_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f8_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’re familiar with the booking program guidelines, let’s discuss the process of assigning supply to sales orders.  This is the reservation process.  \rSupply comes through a purchase order (non New Balance Factory) or work order (New Balance Factory).\r" captiontime="0, 12" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame08_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene8_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f8_s2.mp3" />
+			</audio>
+			<captioning><captions captiontext="Reservation is the point along the order flow when incoming supply is assigned to a sales order.\rSupply will be assigned to orders based on FIFO methodology for all product not in stock when the order is booked.\rOrders in the system will show O/S (outstanding) until they are reserved.\r" captiontime="0, 7.25, 16.25" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame08_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene8_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f8_s3.mp3" />
+			</audio>
+			<captioning><captions captiontext="Reservation for a purchase order/work order will begin to occur 120 days from today’s date in FIFO methodology until the entrie PO/WO is reserved against open orders.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame08_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene8_4" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f8_s4.mp3" />
+			</audio>
+			<captioning><captions captiontext="The product will remain on Reservation until 21 days before the order’s requested ship date.\rAt 21 days, the order will Allocate and drop to Pick and then ship.\rNew Balance can ship up to 15 days prior to a request date.\r" captiontime="0, 7, 12.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame08_04_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene8_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f8_s5.mp3" />
+			</audio>
+			<captioning><captions captiontext="Orders in the system will show O/S (outstanding) until they are reserved.\rBecause of our 120-day reservation window, an order will most likely stay O/S if inventory is not available at approximately 100 days. \r" captiontime="0, 5.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame08_05_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene9_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f9_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Moving forward in our order process, we must assign the on hand inventory to the sales orders. \rAs mentioned, JBA will assign sales orders to inventory based on first in first out.\rOnce an order receives allocation, it will drop to pick and ship.  Let’s discuss the pick further.\r" captiontime="0, 7.25, 14.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame09_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene9_2" template="30_custom" mediatype="none" title="" completiontype="autocomplete" >
+			<audio>
+				<audiofile audio="media/f9_s2.mp3" />
+			</audio>
+			<captioning><captions captiontext="Allocation happens 21 days from the request date. Once product is allocated, the order will drop to pick as long as the pick percentages are met.\rIf the Inventory is available, once the order enters the system, it will allocate, pick and ship.\rIf product is backordered, those units will remain in a Reserved state until supply is available, as long as the supply is expected prior to the order’s Cancel Date. \rIf supply is not expected prior to the Cancel Date, the units will be in an O/S state.\rOnce the product is available, the order will move from Reservation to Allocation.\r" captiontime="0, 11, 19.25, 31.25, 38.25" /></captioning>			<sceneparams>
+				<sceneparam name="symbol">Frame09_02_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene9_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f9_s3.mp3" />
+			</audio>
+			<captioning><captions captiontext="There are a few exceptions that will impact the order flow.\rFor example, Contracts will allocate, but never pick.  The National Account Specialist will enter a Release to pull from the contract. This will allow the product to drop to pick and ship.  This is typical for Large Volume Accounts.\rIt is important to note, a Z and E order type may also be used to pull from a contract.  \rAnother exception to the order flow is for our Running Specialty accounts.  They have a shorter pick window.  \rThis allows accounts to revise their orders up to 10 days before requested ship date.\r" captiontime="0, 4.25, 18.5, 20.75, 28.25, 35.25" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame09_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene9_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f9_s5.mp3" />
+			</audio>
+			<captioning><captions captiontext="The Pick is the status indicating the units on the order have been sent to the warehouse to be picked.\rFutures orders will remain in a Pick status until:\r•The shipping window has opened, 15 days prior to the Request Date;\r•After the Do Not Ship Before (DNSB) date has passed.\r\r" captiontime="0, 7, 10.75, 15" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame09_05_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene9_6" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f9_s6.mp3" />
+			</audio>
+			<captioning><captions captiontext="New balance has established default pick percentages for the order and line level.  \rThe Initial pick %:  is How much of the order is available and ready before it will drop to pick then ship.\rWhile the Backorder pick %:  is How many of the items on backorder are available before it will ship.\rCorporate defaults are set up for accounts.  To learn more, click on the reference button.Filename:  \r" captiontime="0, 6, 14, 21.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame09_06_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene10_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f10_s1.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="New Balance has established house routing guidelines to ensure product ships accurately and on time to the customer.  Our default parcel carrier is UPS Ground Prepaid for shipments under 1,000 lbs. For shipments over 1,000 lbs, New Balance will assign a house less than truckload carrier and ship Cash on delivery.\r" captiontime="0, 13.5" />
+				<captionsID1 captiontext="If an account wants to establish customized shipping requirements, a request can be submitted to the compliance team.  A customer routing profile will be created for that account. \r" captiontime="0" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame10_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene10_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f10_s3.mp3" />
+			</audio>
+			<captioning><captions captiontext="A customer routing profile is a document that contains specific information about each account’s packing, shipping, Value added service and routing requirements.\rHere are some examples of what is included on the routing matrix:\rPacking requirements will tell us to pack the cartons, by Style, Width or SKU. \rWe also want to know how to ship product to the customer.  Will we consolidate and ship weekly or daily? Or is there a set routing schedule? Do they want an advance ship notice or customized Bill of Lading Instructions? \rRouting requirements will tell us what carriers should be used? UPS, FedEx, etc.  The Instructions are based on weight and size of the shipment.\r\r" captiontime="0, 12.25, 16.5, 24.25, 38.5, 41.25" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame10_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene10_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f10_s4.mp3" />
+			</audio>
+			<captioning><captions captiontext="Once an account has a routing profile established by the compliance team, this information is communicated to the Distribution Center and National Account Specialist. They will then set up instructions within our warehouse management system (WM) and JBA so that all orders will default to the correct customer routing instructions.\r" captiontime="0, 12" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame10_03_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene11_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Lets walk through some examples of an order flow process based on your position within New Balance. Click on your job role at New Balance.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene11_ASR_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s2.mp3" />
+			</audio>
+			<captioning><captions captiontext="You’ve selected the  Account Service Representative role within New Balance.  This scenario will highlight one example of the order flow for order Type E. Let’s begin!\r\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_asr_mc</sceneparam>
+			</sceneparams>
+		</scene>	
+		<scene id="scene11_ASR_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s3.mp3" />
+			</audio>
+			<captioning><captions captiontext="New Balance: “Good Afternoon, New Balance, This is Ashley”\rDealer: “Hello Ashley.  How are you?  I need to place and order”\rNew Balance: &quot;Sure.  May I have your account number?\rDealer:“Sure. Ok.  It’s 0001152”\rNew Balance:“What would you like to use as your PO number?”\rDealer:“091211”\rNew Balance:“Great.  Can I have your name and delivery address?”\rDealer:“My name is Kelly and the address is 14 Shoeless Lane Southborough MA 01772’\rNew Balance:“Thank you.  What can I order for you today?”\rDealer:&quot;I’d like to order style WR993GL, the grey color in size 8.  Width size D.”\rNew Balance:“Ok.  That is available.  What else can I get for you?”\rDealer:&quot;That completes my order for today.”\rNew Balance:“This is available.  It should be shipped via ground shipping within 24 hours.  You have a total of 1 unit.  Your reference number for the order is 5111499.  Anything else I can help you with today?”\rDealer:&quot;No, that’s all.  Thank you.”\rNew Balance:“Thank you and have a great day”\r" captiontime="0, 4, 8, 10.25, 15.5, 18, 21.75, 24.75, 32.75, 35.25, 45, 48, 50.25, 66.25, 68.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_02_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="4">
+					<keyframe action="gotoAndPlay" label="good_afternoon"/>
+				</animation>
+				<animation time="19">
+					<keyframe action="gotoAndPlay" label="account_number"/>
+				</animation>
+				<animation time="25">
+					<keyframe action="gotoAndPlay" label="po_number"/>
+				</animation>
+				<animation time="29">
+					<keyframe action="gotoAndPlay" label="enter_address"/>
+				</animation>
+				<animation time="39.5">
+					<keyframe action="gotoAndPlay" label="order_today"/>
+				</animation>
+				<animation time="44">
+					<keyframe action="gotoAndPlay" label="order_start"/>
+				</animation>
+				<animation time="47">
+					<keyframe action="gotoAndPlay" label="shoe_size"/>
+				</animation>
+				<animation time="56">
+					<keyframe action="gotoAndStop" label="confirm_order01"/>
+				</animation>
+				<animation time="62">
+					<keyframe action="gotoAndPlay" label="confirm_order02"/>
+				</animation>
+				<animation time="72">
+					<keyframe action="gotoAndStop" label="goodbye"/>
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene11_ASR_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s4.mp3" />
+			</audio>
+			<captioning><captions captiontext="Since the inventory is available for Kelly right away, the product was immediately allocated, as you can see here.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_03_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_ASR_4" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s5.mp3" />
+			</audio>
+			<captioning><captions captiontext="If an item or inventory is not available, it will stay on reservation until the item is available.  If the item is on backorder, the quantity would be visible under Resrv, as you can see here.  Once the inventory is available, the allocation occurs.\r" captiontime="0, 16.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_04_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_ASR_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s6.mp3" />
+			</audio>
+			<captioning><captions captiontext="As long as the pick percentages are met, these orders drop to pick every hour and then ship out within 24 hours.\rAs you can see from kelly’s order, it is in Desp (Despatched), which means it has shipped out.\r" captiontime="0, 8.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_05_mc</sceneparam>
+			</sceneparams>
+		</scene>	
+		<scene id="scene11_ASR_6" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s7.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Using JBA, the national account specialists and account service reps can find tracking details for an order.  \rOur New Balance dealers can also check the status of an order and view the details using B2B.  By clicking on details the can find the tracking number and complete shipping details.\r" captiontime="0, 9.5" />
+			</captioning>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndStop" label="anim_01"/>
+				</animation>
+				<animation time="1">
+					<keyframe action="gotoAndPlay" label="anim_01"/>
+				</animation>
+				<animation time="14">
+					<keyframe action="gotoAndPlay" label="anim_02"/>
+				</animation>
+				<animation time="18">
+					<keyframe action="gotoAndPlay" label="anim_03"/>
+				</animation>
+			</animations>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_06_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_ASR_7" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s8.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’ve walked through one example of an order flow process within New Balance as  Account Service Representative, let’s review some frequently asked questions.\rIf you would like to see additional examples of the order flow process as an alternate job role, click the button to learn more.\r" captiontime="0, 10.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_asr_end_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s9.mp3" />
+			</audio>
+			<captioning><captions captiontext="Specialist role within New Balance.  This scenario will highlight one example of the order flow process for order Type C. Let’s begin!\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_nas_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s10.mp3" />
+			</audio>
+			<captioning><captions captiontext="InVision Retail Store places an order.  They are a large volume account and place an order for 1,200 shoes  through EDI on May 19th with a request date of November 1st.\rRemember, Allocation occurs 21 days from the request date on the order but the order will never drop to pick.\rA release is entered into the system which triggers the inventory to pick and then ship .\r" captiontime="0, 14.75, 23.75" /></captioning>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndStop" label="anim_01"/>
+				</animation>
+				<animation time="7">
+					<keyframe action="gotoAndStop" label="hilite_amount"/>
+				</animation>
+				<animation time="12">
+					<keyframe action="gotoAndStop" label="hilite_date"/>
+				</animation>
+				<animation time="15">
+					<keyframe action="gotoAndStop" label="popUp_note"/>
+				</animation>
+			</animations>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_07_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s11.mp3" />
+			</audio>
+			<captioning><captions captiontext="During this time the supply is purchased, the product is not manufactured yet.  The factory will provide a timeline of incoming shipments to the warehouse.  Once the purchase order or work order is initiated with the factory, the order will move to O/S.\r" captiontime="0, 13.75" /></captioning>	
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_08_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_4" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s12.mp3" />
+			</audio>
+			<captioning><captions captiontext="Reservation begins to occur at 120 days from today’s date.\rNational Account Specialists  manage orders daily, using Diver to search for open orders.  If an order is in an O/S status inside the reservation window, the Allocation team will be contacted to troubleshoot the issue.\r\r" captiontime="0, 6.25, 21.75" /></captioning>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndStop" label="anim_start"/>
+				</animation>
+				<animation time="2">
+					<keyframe action="gotoAndStop" label="hilite_amount"/>
+				</animation>
+				<animation time="16">
+					<keyframe action="gotoAndStop" label="hilite_date"/>
+				</animation>
+			</animations>	
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_09_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s13.mp3" />
+			</audio>
+			<captioning><captions captiontext="First, the order will allocate 21 days from the request date but will not drop to pick. InVision Retail Store will request the release (1) via EDI to pull product to ship out.\r" captiontime="0" /></captioning>
+			<animations>
+				<animation time="5">
+					<keyframe action="gotoAndStop" label="hilite_amount"/>
+				</animation>
+			</animations>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_10_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_6" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s14.mp3" />
+			</audio>
+			<captioning><captions captiontext="A Release order type (1) is entered into the system  to pull from the contract which triggers the supply to drop to pick and then ship.\r" captiontime="0" /></captioning>
+			<animations>
+				<animation time="5">
+					<keyframe action="gotoAndStop" label="hilite_amount"/>
+				</animation>
+			</animations>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_11_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_NAS_7" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s15.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’ve walked through one example of an order flow process within New Balance as a National Account Specialist, let’s review some frequently asked questions. If you would like to see additional examples of the order flow process as an alternate job role, click the button to learn more.\r" captiontime="0, 13.25" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_nas_end_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		
+		<scene id="scene11_SR_1" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s16.mp3" />
+			</audio>
+			<captioning><captions captiontext="You’ve selected the Sales Representative role within New Balance.  This scenario will highlight one example of the futures order flow process for order type A. Let’s begin!\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_sr_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_2" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s17.mp3" />
+			</audio>
+			<captioning>
+				<captions captiontext="Jack is a Sales Represenative.  He’s placing an order for Runner’s Store.\r" captiontime="0" />
+				<captionsID1 captiontext="Jack selects New Balance footwear Booking and places the order in eCom prior to the booking order due date.\rUsing the customers’ account number, Jack selects the order type for NB Footwear Booking: Future.\r" captiontime="0, 8.5" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_12_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_3" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s17a.mp3" />
+			</audio>
+			<captioning><captions captiontext="Jack selects New Balance footwear Bookingand places the order in eCom prior to the booking order due date.\rUsing the customers’ account number, Jack selects the order type for NB Footwear Booking: Future.\r" captiontime="0, 8.25" /></captioning>			<sceneparams>
+				<sceneparam name="symbol">Frame11_13_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_4" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s18.mp3" />
+			</audio>
+			<captioning><captions captiontext="Jack confirms the order’s Request Date and enters the PO number 091211\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_14_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_5" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s19.mp3" />
+			</audio>
+			<captioning><captions captiontext="Jack enters the quantity for each style and submits the order.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_15_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_6" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s21.mp3" />
+			</audio>
+			<captioning><captions captiontext="When the sales representative reviews order (Order Type A) the item will remain on OUT until the 120 day Reservation window opens. \r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_16_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_7" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s22.mp3" />
+			</audio>
+			<captioning><captions captiontext="Allocation will occur 21 days from the request date on Jack’s order.\rAs long as the pick percentages are met, the order will drop to pick soon after it allocated.\r" captiontime="0, 5.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_17_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_8" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s23.mp3" />
+			</audio>
+			<captioning><captions captiontext="The order will ship unless it has a DNSB or it is not within 15 days before the request date.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_18_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_9" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s24.mp3" />
+			</audio>
+			<captioning><captions captiontext="Jack’s order is fulfilled and Runner’s Store receives their shipment.\r" captiontime="0" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_19_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene11_SR_10" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f11_s25.mp3" />
+			</audio>
+			<captioning><captions captiontext="Now that you’ve walked through one example of an order flow process within New Balance as a Sales Representative, let’s review some frequently asked questions.\rIf you would like to see additional examples of the order flow process as an alternate job role, click the button to learn more.\r" captiontime="0, 10.75" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame11_01_sr_end_mc</sceneparam>
+			</sceneparams>
+		</scene>
+		
+		<scene id="scene12" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f12_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="Take a moment and review some of New Balance’s frequently asked questions.\rYou have the option to print out the FAQ document. Click the reference  button in the main navigation to open the document.  \r" captiontime="0, 5.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame12_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene13" template="30_custom" mediatype="none" title="" >
+			<audio>
+				<audiofile audio="media/f13_s1.mp3" />
+			</audio>
+			<captioning><captions captiontext="The New Balance order process strategy, the collective steps and tasks associated with fulfilling your customers order for New Balance products play a crucial role in ensuring an efficient and long term relationship with your customer.\rLet’s test your knowledge on order process with a few questions.\r" captiontime="0, 12.75, 15.5" /></captioning>
+			<sceneparams>
+				<sceneparam name="symbol">Frame13_mc</sceneparam>
+			</sceneparams>
+			<animations>
+				<animation time="0">
+					<keyframe action="gotoAndPlay" label="anim01" />
+				</animation>
+			</animations>
+		</scene>
+		<scene id="scene105" template="22_finalassesintro" mediatype="none">
+			<audio>
+				<audiofile audio="media/f14_s1.mp3" async="false" />
+			</audio>
+			<captioning><captions captiontext="Let’s see what you have learned from this course.\rThe following pages will test your knowledge of New Balance Order Process. It is 5 questions in length and should take you approximately 5 minutes to complete. \r" captiontime="0, 3.25" /></captioning>	
+			<assessmentresults>
+					<assessment passpercent="80"/>
+					<assessment pool="5"/>
+					<assessment sort="none"/>
+			</assessmentresults>	    
+			<sceneparams>
+				<sceneparam name="symbol">a25_FinalAssessmentIntroduction</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene106" template="14_multiplechoice" mediatype="none">
+			<feedbacks>
+				<feedback selectiontype="one" />
+				<feedback questiontype="assessment" />
+			</feedbacks>
+			<multiplechoice>
+				<answers type="0" answer="0" id="bullet1">A</answers>
+				<answers type="0" answer="1" id="bullet2">E</answers>
+				<answers type="0" answer="0" id="bullet3">H/J</answers>
+				<answers type="0" answer="0" id="bullet4">1</answers>
+				<question questiontext="Bob from New Balance Shoe Store uses B2B to place a special order for immediate delivery. The order is for an MTS style that is showing available inventory. What is the order type? " />
+			</multiplechoice>
+			<sceneparams>
+				<sceneparam name="symbol">a15_Quiz_MultipleChoice</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene108" template="14_multiplechoice" mediatype="none">
+			<feedbacks>
+				<feedback selectiontype="one" />
+				<feedback questiontype="assessment" />
+			</feedbacks>
+			<multiplechoice>
+				<answers type="0" answer="0" id="bullet1">JBA</answers>
+				<answers type="0" answer="1" id="bullet2">eCom</answers>
+				<answers type="0" answer="0" id="bullet3">B2B</answers>
+				<question questiontext="What order source will Mike, a sales rep, use to place a Future order?" />
+			</multiplechoice>
+			<sceneparams>
+				<sceneparam name="symbol">a15_Quiz_MultipleChoice</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene109" template="14_multiplechoice" mediatype="none">
+			<feedbacks>
+				<feedback selectiontype="one" />
+				<feedback questiontype="assessment" />
+			</feedbacks>
+			<multiplechoice>
+				<answers type="0" answer="0" id="bullet1">Within 24 hours</answers>
+				<answers type="0" answer="0" id="bullet2">15 days from today’s date</answers>
+				<answers type="0" answer="0" id="bullet3">30 days from today’s date</answers>
+				<answers type="0" answer="1" id="bullet4">120 days from today’s date</answers>
+				<question questiontext="When will this order move to reservation?" />
+			</multiplechoice>
+			<sceneparams>
+				<sceneparam name="symbol">a15_Quiz_MultipleChoice</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene110" template="14_multiplechoice" mediatype="none">
+			<feedbacks>
+				<feedback selectiontype="one" />
+				<feedback questiontype="assessment" />
+			</feedbacks>
+			<multiplechoice>
+				<answers type="0" answer="0" id="bullet1">15 days before the request date or before the DBSB date</answers>
+				<answers type="0" answer="1" id="bullet2">15 days before the request date or after the DNSB date</answers>
+				<answers type="0" answer="0" id="bullet3">30 days before the request date or before the DNSB date</answers>
+				<answers type="0" answer="0" id="bullet4">30 days before the request date or after the DNSB date</answers>
+				<question questiontext="When will New Balance ship product to the customer?" />
+			</multiplechoice>
+			<sceneparams>
+				<sceneparam name="symbol">a15_Quiz_MultipleChoice</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene111" template="14_multiplechoice" mediatype="none">
+			<feedbacks>
+				<feedback selectiontype="multiple" />
+				<feedback questiontype="assessment" />
+			</feedbacks>
+			<multiplechoice>
+				<answers type="0" answer="1" id="bullet1">Receives the products</answers>
+				<answers type="0" answer="1" id="bullet2">Determines the order is accurate and complete</answers>
+				<answers type="0" answer="1" id="bullet3">Is invoiced and New Balance receives payment</answers>
+				<question questiontext="The order process is complete when the customer: (select all that apply)" />
+			</multiplechoice>
+			<sceneparams>
+				<sceneparam name="symbol">a15_Quiz_MultipleChoice</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene1016" template="23_finalasssubmit" mediatype="none">
+			<assessmentsubmit>
+				<assessment text="&lt;P&gt;Congratulations!&lt;/P&gt;&lt;br&gt;You have completed the final assessment.  Select an option below to review your questions or submit your answers for evaluation." />
+			</assessmentsubmit>	
+			<sceneparams>
+				<sceneparam name="symbol">a26_FinalAssessmentSubmit</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene1017" template="24_finalassesresults" mediatype="none">
+			<sceneparams>
+				<sceneparam name="symbol">a27_FinalAssessmentResults</sceneparam>
+			</sceneparams>
+		</scene>
+		<scene id="scene1018" template="25_courseconclusion" mediatype="none">
+			<audio>
+				<audiofilecorrect audio="media/f15_s1.mp3" />
+			</audio>
+			<captioning>
+				<captionsincorrect captiontext="You have not completed The New Balance Order Process Course.\r" captiontime="0" />
+				<captionscorrect captiontext="Congratulations! You have successfully completed The New Balance Order Process Course.  \rThank you for taking the time to learn more about New Balance.  We hope that what you have learned today will help you and your consumers become more effective and efficient! \r" captiontime="0, 6.25" />
+			</captioning>
+			<sceneparams>
+				<sceneparam name="symbol">a28_CourseConclusion</sceneparam>
+			</sceneparams>
+		</scene>
+	</scenes>
+	<sequences>
+		<step desc="sequence" id="sequence1" type="lesson" name="Lesson Introduction" image="">
+		  <step desc="scene" id="scene1" />
+		  <step desc="scene" id="scene2" />
+		  <step desc="scene" id="scene3" />
+		</step>
+		<step desc="sequence" id="sequence2" type="lesson" name="New Balance Associates and Partners" image="">
+		  <step desc="scene" id="scene3a_1" />
+		  <step desc="scene" id="scene3a_2" />
+		</step>
+		<step desc="sequence" id="sequence3" type="lesson" name="Channel Overview" image="">
+		  <step desc="scene" id="scene4_1" />
+		  <step desc="scene" id="scene4_2" />
+		  <step desc="scene" id="scene4_3" />
+		</step>
+		<step desc="sequence" id="sequence4" type="lesson" name="Order Types" image="">
+		  <step desc="scene" id="scene5_1" />
+		  <step desc="scene" id="scene5_2" />
+		  <step desc="scene" id="scene5_3" />
+		</step>
+		<step desc="sequence" id="sequence5" type="lesson" name="Order Source" image="">
+		  <step desc="scene" id="scene6_1" />
+		  <step desc="scene" id="scene6_2" />
+		  <step desc="scene" id="scene6_3" />
+		  <step desc="scene" id="scene6_5" />
+		  <step desc="scene" id="scene6_6" />
+		</step>
+		<step desc="sequence" id="sequence6" type="lesson" name="Order Flow" image="">
+			<step desc="sequence" id="subsequence1" type="lesson" name="Booking and Lead Time" image="">
+			  <step desc="scene" id="scene7_1" />
+			  <step desc="scene" id="scene7_2" />
+			  <step desc="scene" id="scene7_3" />
+			  <step desc="scene" id="scene7_4" />
+			  <step desc="scene" id="scene7_5" />
+			  <step desc="scene" id="scene7_6" />
+			  <step desc="scene" id="scene7_7" />
+			</step>
+			<step desc="sequence" id="subsequence2" type="lesson" name="Reservation" image="">
+			  <step desc="scene" id="scene8_1" />
+			  <step desc="scene" id="scene8_2" />
+			  <step desc="scene" id="scene8_3" />
+			  <step desc="scene" id="scene8_4" />
+			  <step desc="scene" id="scene8_5" />
+			</step>
+			<step desc="sequence" id="subsequence3" type="lesson" name="Allocation and Pick" image="">
+			  <step desc="scene" id="scene9_1" />
+			  <step desc="scene" id="scene9_2" />
+			  <step desc="scene" id="scene9_3" />
+			  <step desc="scene" id="scene9_5" />
+			  <step desc="scene" id="scene9_6" />
+			</step>
+			<step desc="sequence" id="subsequence4" type="lesson" name="Shipping and Compliance" image="">
+			  <step desc="scene" id="scene10_1" />
+			  <step desc="scene" id="scene10_2" />
+			  <step desc="scene" id="scene10_3" />
+			</step>
+			<step desc="sequence" id="subsequence5" type="lesson" name="Order Flow Scenario" image="">
+			  <step desc="scene" id="scene11_1" />
+			  <step desc="scene" id="scene11_ASR_1" />
+			  <step desc="scene" id="scene11_ASR_2" />
+			  <step desc="scene" id="scene11_ASR_3" />
+			  <step desc="scene" id="scene11_ASR_4" />
+			  <step desc="scene" id="scene11_ASR_5" />
+			  <step desc="scene" id="scene11_ASR_6" />
+			  <step desc="scene" id="scene11_ASR_7" />
+			</step>
+		</step>
+		<step desc="sequence" id="sequence11" type="lesson" name="FAQ's" image="">
+		  <step desc="scene" id="scene12" />
+		</step>
+		<step desc="sequence" id="sequence12" type="lesson" name="Course Conclusion" image="">
+		  <step desc="scene" id="scene13" />
+		</step>
+		<step desc="sequence" id="sequence13" type="assessment" name="Final Assessment" image="">
+		  <step desc="scene" id="scene105" />
+		  <step desc="scene" id="scene106" />
+		  <step desc="scene" id="scene108" />
+		  <step desc="scene" id="scene109" />
+		  <step desc="scene" id="scene110" />
+		  <step desc="scene" id="scene111" />
+		  <step desc="scene" id="scene1016" />
+		  <step desc="scene" id="scene1017" />
+		  <step desc="scene" id="scene1018" />
+		</step>  	
+	</sequences>
+</module>

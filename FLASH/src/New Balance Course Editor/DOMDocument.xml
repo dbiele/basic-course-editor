@@ -1,0 +1,196 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="600" frameRate="29" currentTimeline="1" xflVersion="2.1" creatorInfo="Adobe Flash Professional CS5.5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.5 build 349" majorVersion="11" minorVersion="5" buildNumber="349" viewAngle3D="88.2079048186946" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Global" itemID="4f0b4d29-000003e5" isExpanded="true"/>
+          <DOMFolderItem name="Global/content screens" itemID="4f0b7fd2-0000078f" isExpanded="true"/>
+          <DOMFolderItem name="Global/content screens/ASSETS" itemID="4f0c5e91-000004c1"/>
+          <DOMFolderItem name="Global/Fonts" itemID="4dc02e00-00002343" isExpanded="true"/>
+          <DOMFolderItem name="Global/image_graphics" itemID="4f0b4d5c-000003f6"/>
+          <DOMFolderItem name="Global/Navigation" itemID="4f0b4d29-000003e6"/>
+          <DOMFolderItem name="Global/Navigation/buttons" itemID="4c5ff6b6-00008d36"/>
+          <DOMFolderItem name="Global/Navigation/buttons/button elements" itemID="4739d782-00001bdc"/>
+          <DOMFolderItem name="Global/Navigation/navigation elements" itemID="4f0b4d29-000003e7" isExpanded="true"/>
+          <DOMFolderItem name="Global/Navigation/navigation elements/assets" itemID="4dc02c8d-00002338"/>
+          <DOMFolderItem name="Global/Navigation/navigation elements/backgrounds" itemID="4dc05687-000025bb"/>
+          <DOMFolderItem name="Global/Navigation/navigation elements/backgrounds/img" itemID="4dbee39c-000001b1"/>
+          <DOMFolderItem name="Global/Window - Shared Assets" itemID="4f0b808c-000009aa" isExpanded="true"/>
+          <DOMFolderItem name="Global/Window - Shared Assets/buttons" itemID="4f0b808c-000009ab" isExpanded="true"/>
+          <DOMFolderItem name="Global/Window - Shared Assets/buttons/assets" itemID="4dc83914-00000df5"/>
+          <DOMFolderItem name="icons" itemID="4f0b51a4-0000074c"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="_segoe bold" itemID="4f0cedd5-0000095e" font="SegoeUI-Bold" size="0" id="8" sourceLastImported="1326247381" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="_calibri" itemID="4f0c4870-000000f3" font="Calibri" size="0" id="7" sourceLastImported="1326205040" embedRanges="1|2|3|4"/>
+          <DOMFontItem name="_segoe light" itemID="4f0c43c3-00000b0d" font="SegoeUI-Light" size="0" id="6" sourceLastImported="1326203843" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="_Segoe regular" itemID="4f0b8282-00000a4d" font="SegoeUI" size="0" id="5" sourceLastImported="1326154370" embedRanges="1|2|3|4|5"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="Global/image_graphics/871_bottom_up.png" itemID="4e1b2d68-00001c30" sourceExternalFilepath="../Outsole_Master/LIBRARY/Custom Content/image_graphics/871_bottom_up.png" sourceLastImported="1310403943" originalCompressionType="lossless" quality="50" href="Global/image_graphics/871_bottom_up.png" bitmapDataHRef="M 4 1326140764.dat" frameRight="15800" frameBottom="13580"/>
+          <DOMBitmapItem name="Global/image_graphics/871_outsole_side.png" itemID="4e1b2d68-00001c31" sourceExternalFilepath="../Outsole_Master/LIBRARY/Custom Content/image_graphics/871_outsole_side.png" sourceLastImported="1310403943" originalCompressionType="lossless" quality="50" href="Global/image_graphics/871_outsole_side.png" bitmapDataHRef="M 5 1326140764.dat" frameRight="10000" frameBottom="4020"/>
+          <DOMBitmapItem name="Global/Navigation/navigation elements/backgrounds/img/bg-grey-dark-edges.png" itemID="4ddd6e99-0000192f" sourceExternalFilepath="../../../New Balance Fit/FLASH/src/Fit_Master/LIBRARY/Global/Navigation/navigation elements/backgrounds/img/bg-grey-dark-edges.png" sourceLastImported="1305311245" originalCompressionType="lossless" quality="50" href="Global/Navigation/navigation elements/backgrounds/img/bg-grey-dark-edges.png" bitmapDataHRef="M 3 1326140713.dat" frameRight="20320" frameBottom="13800"/>
+          <DOMBitmapItem name="icons/nb_branding.png" itemID="4f0b53e0-0000077c" sourceExternalFilepath="./LIBRARY/icons/nb_branding.png" sourceLastImported="1326141796" externalFileSize="59711" originalCompressionType="lossless" quality="50" href="icons/nb_branding.png" bitmapDataHRef="M 6 1326141813.dat" frameRight="5320" frameBottom="2560"/>
+          <DOMBitmapItem name="icons/save.png" itemID="4f0b53e0-0000077d" sourceExternalFilepath="C:/Projects/New Balance/New Balance Course Editor/FLASH/src/New Balance Course Editor/LIBRARY/icons/save.png" sourceLastImported="1326142432" externalFileSize="1114" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="icons/save.png" bitmapDataHRef="M 2 1326139693.dat" frameRight="960" frameBottom="960"/>
+     </media>
+     <symbols>
+          <Include href="Global/content screens/ASSETS/blank_mc.xml" loadImmediate="false" itemID="4f0ceb71-00000952" lastModified="1326246823"/>
+          <Include href="Global/content screens/ASSETS/browse_background.xml" loadImmediate="false" itemID="4f0ccd17-000006d0" lastModified="1326238999"/>
+          <Include href="Global/content screens/ASSETS/caption_background_mc.xml" loadImmediate="false" itemID="4f0ce1df-0000092c" lastModified="1326244319"/>
+          <Include href="Global/content screens/ASSETS/caption_item.xml" itemID="4f0cde2c-0000090b" lastModified="1326246192"/>
+          <Include href="Global/content screens/ASSETS/glossary arrow.xml" loadImmediate="false" itemID="4f0c9365-0000056a" lastModified="1326224638"/>
+          <Include href="Global/content screens/ASSETS/glossary_term.xml" itemID="4f0c5e42-000004a1" lastModified="1326225441"/>
+          <Include href="Global/content screens/ASSETS/lesson_term.xml" itemID="4f0cb548-000006bb" lastModified="1326234809"/>
+          <Include href="Global/content screens/ASSETS/reference_term.xml" itemID="4f0c97ac-000005d7" lastModified="1326230181"/>
+          <Include href="Global/content screens/ASSETS/scene_term.xml" itemID="4f0cb510-000006b1" lastModified="1326247400"/>
+          <Include href="Global/content screens/browseXML.xml" itemID="4f0b7fff-00000792" lastModified="1326247533"/>
+          <Include href="Global/content screens/FeedbackView.xml" itemID="4f0c5704-00000153" lastModified="1326209462"/>
+          <Include href="Global/content screens/GeneralDataView.xml" itemID="4f0c38c5-00000ab7" lastModified="1326203855"/>
+          <Include href="Global/content screens/GlossaryView.xml" itemID="4f0c5a7e-0000046a" lastModified="1326246256"/>
+          <Include href="Global/content screens/ReferenceView.xml" itemID="4f0c9729-00000598" lastModified="1326237453"/>
+          <Include href="Global/content screens/SaveView.xml" itemID="4f0c4447-00000b2d" lastModified="1326247494"/>
+          <Include href="Global/content screens/SceneView.xml" itemID="4f0caf1a-00000691" lastModified="1326247216"/>
+          <Include href="Global/image_graphics/861_outsole_bottom_up.xml" loadImmediate="false" itemID="4e15e2af-00000358" lastModified="1310059117"/>
+          <Include href="Global/image_graphics/861_outsole_side.xml" loadImmediate="false" itemID="4e15e25a-00000324" lastModified="1310057106"/>
+          <Include href="Global/Navigation/buttons/button elements/nav_hit_area.xml" loadImmediate="false" itemID="47332d85-000003be" lastModified="1305312207"/>
+          <Include href="Global/Navigation/navigation elements/assets/square.xml" itemIcon="1" loadImmediate="false" itemID="4dbee830-000001c3" lastModified="1320875354"/>
+          <Include href="Global/Navigation/navigation elements/background_navigation.xml" loadImmediate="false" itemID="4dc05721-000025c5" lastModified="1308944208"/>
+          <Include href="Global/Navigation/navigation elements/backgrounds/gfx-bgGreyDarkEdges.xml" loadImmediate="false" itemID="4dbedee2-000001a7" lastModified="1308944285"/>
+          <Include href="Global/Navigation/navigationWindow.xml" itemID="4f0b5504-0000077f" lastModified="1326143155"/>
+          <Include href="Global/Window - Shared Assets/buttons/assets/bg-gradient-glow.xml" loadImmediate="false" itemID="4dcbf7b5-00000b4f" lastModified="1305215834"/>
+          <Include href="Global/Window - Shared Assets/buttons/assets/btn_bg_blue.xml" loadImmediate="false" itemID="4dcbf01c-00000b19" lastModified="1320090441"/>
+          <Include href="Global/Window - Shared Assets/buttons/assets/btn_bg_grey.xml" loadImmediate="false" itemID="4dcbf021-00000b1a" lastModified="1305210913"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-add.xml" loadImmediate="false" itemID="4f0c5de1-00000485" lastModified="1326224622"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-browse.xml" loadImmediate="false" itemID="4f0b8115-00000a1d" lastModified="1326239294"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-cancel.xml" loadImmediate="false" itemID="4dc2ab6a-00006c73" lastModified="1320700188"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-close.xml" loadImmediate="false" itemID="4dc2ade1-00006ca8" lastModified="1326204907"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-delete.xml" loadImmediate="false" itemID="4f0c5e72-000004bd" lastModified="1326210692"/>
+          <Include href="Global/Window - Shared Assets/buttons/btn-save.xml" loadImmediate="false" itemID="4f0c488d-0000010e" lastModified="1326205111"/>
+          <Include href="icons/feedback_icon.xml" loadImmediate="false" itemID="4f0b51d8-00000754" lastModified="1326142107"/>
+          <Include href="icons/generaldata_icon.xml" loadImmediate="false" itemID="4f0b51df-00000755" lastModified="1326144596"/>
+          <Include href="icons/glossarydata_icon.xml" loadImmediate="false" itemID="4f0b51ec-0000075b" lastModified="1326142177"/>
+          <Include href="icons/referencedata_icon.xml" loadImmediate="false" itemID="4f0b51f8-00000761" lastModified="1326142198"/>
+          <Include href="icons/save_icon.xml" loadImmediate="false" itemID="4f0b4f5b-00000406" lastModified="1326143140"/>
+          <Include href="icons/scenedata_icon.xml" loadImmediate="false" itemID="4f0b5202-00000767" lastModified="1326142256"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="navigation" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Global/Navigation/navigationWindow" name="navWindow" centerPoint3DX="143.3" centerPoint3DY="321.05">
+                                             <matrix>
+                                                  <Matrix tx="10" ty="50"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="133.3" y="271.05"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="title" color="#FF4FFF" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMStaticText width="858.2" height="47.9" isSelectable="false">
+                                             <matrix>
+                                                  <Matrix tx="12" ty="2"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="247.95" y="29"/>
+                                             </transformationPoint>
+                                             <textRuns>
+                                                  <DOMTextRun>
+                                                       <characters>New Balance Course Editor</characters>
+                                                       <textAttrs>
+                                                            <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-2.85" size="36" bitmapSize="720" face="SegoeUI" fillColor="#2A6786"/>
+                                                       </textAttrs>
+                                                  </DOMTextRun>
+                                             </textRuns>
+                                        </DOMStaticText>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="shoe" color="#9933CC" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Global/image_graphics/861_outsole_bottom_up" name="image_intro" centerPoint3DX="735.75" centerPoint3DY="323.15">
+                                             <matrix>
+                                                  <Matrix tx="262.15" ty="1.95"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="473.6" y="321.2"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="shoe" color="#9933CC" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Global/image_graphics/861_outsole_side" centerPoint3DX="534" centerPoint3DY="508.5">
+                                             <matrix>
+                                                  <Matrix a="0.599990844726563" d="0.599990844726563" tx="459" ty="478.35"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="125" y="50.25"/>
+                                             </transformationPoint>
+                                             <filters>
+                                                  <BlurFilter/>
+                                             </filters>
+                                             <color>
+                                                  <Color alphaMultiplier="0.5"/>
+                                             </color>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+                    <DOMLayer name="background" color="#FF800A" locked="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Global/Navigation/navigation elements/background_navigation" name="background_mc" centerPoint3DX="512" centerPoint3DY="300">
+                                             <matrix>
+                                                  <Matrix a="1.00787353515625" d="0.86956787109375"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="508" y="345"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="317436" publishTime="1326247506"/>
+          <PublishItem publishSize="317415" publishTime="1326247406"/>
+          <PublishItem publishSize="317438" publishTime="1326247385"/>
+          <PublishItem publishSize="311298" publishTime="1326247221"/>
+          <PublishItem publishSize="311514" publishTime="1326247122"/>
+          <PublishItem publishSize="311515" publishTime="1326247080"/>
+          <PublishItem publishSize="311504" publishTime="1326246973"/>
+          <PublishItem publishSize="293637" publishTime="1326246960"/>
+          <PublishItem publishSize="311357" publishTime="1326246491"/>
+          <PublishItem publishSize="311357" publishTime="1326246465"/>
+          <PublishItem publishSize="311244" publishTime="1326245296"/>
+          <PublishItem publishSize="311201" publishTime="1326245008"/>
+          <PublishItem publishSize="311200" publishTime="1326244987"/>
+          <PublishItem publishSize="311190" publishTime="1326244940"/>
+          <PublishItem publishSize="311191" publishTime="1326244904"/>
+          <PublishItem publishSize="311191" publishTime="1326244880"/>
+          <PublishItem publishSize="311190" publishTime="1326244852"/>
+          <PublishItem publishSize="286400" publishTime="1326244807"/>
+          <PublishItem publishSize="286336" publishTime="1326244759"/>
+          <PublishItem publishSize="286334" publishTime="1326244709"/>
+     </publishHistory>
+</DOMDocument>

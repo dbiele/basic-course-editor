@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/ASSETS/caption_item" itemID="4f0cde2c-0000090b" linkageExportForAS="true" linkageBaseClass="com.invision.view.CaptionItemView" linkageClassName="caption_item" lastModified="1326246192">
+  <timeline>
+    <DOMTimeline name="caption_item">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMInputText name="caption_txt" width="433.95" height="15.9" border="true">
+                  <matrix>
+                    <Matrix tx="2" ty="23"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMInputText name="time_txt" selected="true" width="151" height="15.9" border="true">
+                  <matrix>
+                    <Matrix tx="2" ty="64"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMDynamicText name="captiontitle_txt" width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Caption Text: </characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="43"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Caption Time</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

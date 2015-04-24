@@ -1,0 +1,108 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/ASSETS/glossary_term" itemID="4f0c5e42-000004a1" linkageExportForAS="true" linkageBaseClass="com.invision.view.GlossaryTermWindow" linkageClassName="glossary_term" lastModified="1326225441" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="glossary_term">
+      <layers>
+        <DOMLayer name="text" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="8.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Glossary Term:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="58.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Glossary Description</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMInputText name="term_txt" width="495.95" height="13.25" border="true">
+                  <matrix>
+                    <Matrix tx="10" ty="29.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="10" bitmapSize="200" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMInputText name="description_txt" width="496.95" height="75.5" border="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="10" ty="79.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="10" bitmapSize="200" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/Window - Shared Assets/buttons/btn-delete" name="delete_btn" centerPoint3DX="476.45" centerPoint3DY="12">
+                  <matrix>
+                    <Matrix tx="444.95" ty="1.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.5" y="10.55"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix d="0.831680297851563"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="259.45" y="101"/>
+                  </transformationPoint>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!10379 4040S2|0 4040!0 4040|0 0!0 0|10379 0!10379 0|10379 4040"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

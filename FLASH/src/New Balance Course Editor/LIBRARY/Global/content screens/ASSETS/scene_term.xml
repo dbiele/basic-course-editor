@@ -1,0 +1,181 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/ASSETS/scene_term" itemID="4f0cb510-000006b1" linkageExportForAS="true" linkageBaseClass="com.invision.view.SceneTermWindow" linkageClassName="scene_term" lastModified="1326247400" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="scene_term">
+      <layers>
+        <DOMLayer name="text" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" weight="2">
+                        <fill>
+                          <SolidColor color="#333333"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!220 1504|9639 1504"/>
+                  </edges>
+                </DOMShape>
+                <DOMStaticText selected="true" width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="76.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Caption Data.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>  Use captioning tool to format correctly.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="342" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="28.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Audio File.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                    <DOMTextRun>
+                      <characters>  Audio files must be .mp3.  Link is relative to swf file.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMInputText name="audio_txt" width="473.95" height="15.9" border="true">
+                  <matrix>
+                    <Matrix tx="10" ty="49.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMInputText>
+                <DOMStaticText width="75.95" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="10" ty="6.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Scene Name:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Bold"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMDynamicText name="name_txt" width="391.95" height="15.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="84" ty="6.55"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Scene Name:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="button" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/glossary arrow" name="scrollup_btn" centerPoint3DX="457.45" centerPoint3DY="86.45">
+                  <matrix>
+                    <Matrix tx="449.95" ty="81.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.5" y="4.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/glossary arrow" name="scrolldown_btn" centerPoint3DX="470.45" centerPoint3DY="86.45">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="477.95" ty="90.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.5" y="4.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mask" color="#9933CC" autoNamed="false" visible="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!9785 1944S2|9785 9269!9785 9269|0 9269!0 9269|0 1944!0 1944|9785 1944"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="captions" color="#FF800A" parentLayerIndex="2" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/blank_mc" name="blank_mc" centerPoint3DX="59" centerPoint3DY="116">
+                  <matrix>
+                    <Matrix tx="30" ty="97"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="29" y="19"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/caption_background_mc" name="caption_background" centerPoint3DX="245.95" centerPoint3DY="70.5">
+                  <matrix>
+                    <Matrix d="0.689361572265625"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="245.95" y="70.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

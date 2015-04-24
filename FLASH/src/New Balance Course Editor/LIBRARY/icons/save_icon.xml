@@ -1,0 +1,61 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="icons/save_icon" itemID="4f0b4f5b-00000406" lastModified="1326143140">
+  <timeline>
+    <DOMTimeline name="save_icon">
+      <layers>
+        <DOMLayer name="icon" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText width="109.05" height="23.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="6" ty="97"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Save</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-2.85" size="18" bitmapSize="360" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <LinearGradient>
+                        <matrix>
+                          <Matrix a="0.0781402587890625" b="0.0781402587890625" c="-0.0781402587890625" d="0.0781402587890625" tx="64.65" ty="64"/>
+                        </matrix>
+                        <GradientEntry color="#DD8A14" ratio="0"/>
+                        <GradientEntry color="#E3A218" ratio="1"/>
+                      </LinearGradient>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!2573 2560|2573 0!2573 0|13 0!13 0|13 2560!13 2560|2573 2560"/>
+                  </edges>
+                </DOMShape>
+                <DOMBitmapInstance selected="true" libraryItemName="icons/save.png">
+                  <matrix>
+                    <Matrix a="2.66653442382813" d="2.66653442382813" ty="0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="24" y="24"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

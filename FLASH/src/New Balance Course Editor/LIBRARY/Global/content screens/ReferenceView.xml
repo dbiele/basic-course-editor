@@ -1,0 +1,147 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/content screens/ReferenceView" itemID="4f0c9729-00000598" linkageExportForAS="true" linkageBaseClass="com.invision.view.ReferenceView" linkageClassName="ReferenceView" lastModified="1326237453" lastUniqueIdentifier="5">
+  <timeline>
+    <DOMTimeline name="ReferenceView">
+      <layers>
+        <DOMLayer name="term" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text link" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="glossaryterms" width="197" height="418" isSelectable="false" renderAsHTML="true" lineType="multiline no wrap">
+                  <matrix>
+                    <Matrix tx="11" ty="105"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="instructions_txt" width="174" height="15.9" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="11" ty="84"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Click Links Below</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" bitmapSize="240" face="SegoeUI-Light" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="title" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor color="#FFFFFF"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!181 1560|14181 1560"/>
+                  </edges>
+                </DOMShape>
+                <DOMStaticText width="547.1" height="23.9" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="11" ty="7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Reference Links</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="18" bitmapSize="360" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+                <DOMStaticText width="547.1" height="36.4" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="11" ty="32"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>This section allows you to modify, delete and add reference links to a course.&#xD;Icon Link can be set to an image file in the media folder 30x30.</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" rotation="true" lineSpacing="-0.8" size="14" bitmapSize="280" face="SegoeUI" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="buttons" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Global/Window - Shared Assets/buttons/btn-add" name="add_btn" centerPoint3DX="676.45" centerPoint3DY="61.35">
+                  <matrix>
+                    <Matrix tx="644.95" ty="50.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="31.5" y="10.7"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/glossary arrow" name="scrollup_btn" centerPoint3DX="88.5" centerPoint3DY="534.65">
+                  <matrix>
+                    <Matrix tx="81" ty="530.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.5" y="4.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Global/content screens/ASSETS/glossary arrow" name="scrolldown_btn" selected="true" centerPoint3DX="101.5" centerPoint3DY="534.65">
+                  <matrix>
+                    <Matrix a="-1" d="-1" tx="109" ty="539.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="7.5" y="4.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="background" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#00A6C9"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!14384 10861|0 10861!0 10861|0 0!0 0|14384 0!14384 0|14384 10861"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

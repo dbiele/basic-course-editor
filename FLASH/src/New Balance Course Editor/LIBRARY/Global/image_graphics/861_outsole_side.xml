@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Global/image_graphics/861_outsole_side" itemID="4e15e25a-00000324" lastModified="1310057106">
+  <timeline>
+    <DOMTimeline name="861_outsole_side">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="Global/image_graphics/871_outsole_side.png">
+                  <matrix>
+                    <Matrix tx="-125" ty="-50.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="250" y="100.5"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
